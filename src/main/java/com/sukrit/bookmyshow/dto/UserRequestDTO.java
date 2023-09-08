@@ -1,12 +1,14 @@
 package com.sukrit.bookmyshow.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 
 @Setter
 @Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserRequestDTO {
 
     private String name;

@@ -3,11 +3,13 @@ package com.sukrit.bookmyshow.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
+@AllArgsConstructor
+@Builder
+@NoArgsConstructor
 @Setter
 @Getter
 @Entity
