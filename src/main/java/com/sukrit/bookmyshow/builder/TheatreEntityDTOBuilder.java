@@ -14,7 +14,7 @@ public class TheatreEntityDTOBuilder {
                 .name(theatreRequestDTO.getName())
                 .city(theatreRequestDTO.getCity())
                 .address(theatreRequestDTO.getAddress())
-                .auditoriums(theatreRequestDTO.getAuditoriums())
+                .auditorium(theatreRequestDTO.getAuditorium())
                 .build();
     }
 
@@ -23,7 +23,7 @@ public class TheatreEntityDTOBuilder {
                 .name(theatre.getName())
                 .city(theatre.getCity())
                 .address(theatre.getAddress())
-                .auditoriums(theatre.getAuditoriums())
+                .auditoriums(theatre.getAuditorium())
                 .build();
     }
 }

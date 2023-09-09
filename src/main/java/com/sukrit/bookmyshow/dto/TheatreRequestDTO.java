@@ -17,6 +17,6 @@ import java.util.List;
 public class TheatreRequestDTO {
     private String name;
     private String address;
-    private List<Auditorium> auditoriums;
+    private List<Auditorium> auditorium;
     private City city;
 }

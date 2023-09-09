@@ -14,7 +14,7 @@ import java.util.List;
 public class Movie extends BaseModel {
     private String name;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Actor> actors;
 
     @ElementCollection

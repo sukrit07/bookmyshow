@@ -1,5 +1,6 @@
 package com.sukrit.bookmyshow.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
@@ -16,6 +17,6 @@ public class City extends BaseModel {
 
     private String state;
 
-    @OneToMany
+    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
     private List<Theatre> theatres;
 }

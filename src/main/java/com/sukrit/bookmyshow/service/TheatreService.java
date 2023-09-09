@@ -9,7 +9,6 @@ import com.sukrit.bookmyshow.model.Theatre;
 import com.sukrit.bookmyshow.repository.TheatreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -21,9 +20,7 @@ public class TheatreService {
     public TheatreResponseDTO addTheater(TheatreRequestDTO theaterDto) {
 
         Theatre theaterEntity = TheatreEntityDTOBuilder.toEntity(theaterDto);
-
         //theaterEntity.getSeats().addAll(getTheaterSeats());
-
         theaterEntity = theatreRepository.save(theaterEntity);
         return TheatreEntityDTOBuilder.toDto(theaterEntity);
     }

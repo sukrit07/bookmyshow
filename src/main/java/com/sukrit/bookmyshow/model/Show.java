@@ -14,10 +14,11 @@ import java.util.List;
 @NoArgsConstructor
 public class Show extends BaseModel{
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Movie movie;
     private Date startTime;
     private Date endTime;
+
     @ManyToOne
     private Auditorium auditorium;
 

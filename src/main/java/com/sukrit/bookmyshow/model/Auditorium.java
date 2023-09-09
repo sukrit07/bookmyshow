@@ -13,11 +13,14 @@ public class Auditorium extends BaseModel{
 
     private String name;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Seat> seats;
 
-    @OneToMany(mappedBy = "auditorium")
+    @OneToMany(mappedBy = "auditorium" ,cascade = CascadeType.ALL)
     private List<Show> shows;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Theatre theatre;
 
     @ElementCollection
     @Enumerated(EnumType.STRING)

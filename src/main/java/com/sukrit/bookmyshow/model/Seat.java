@@ -19,5 +19,5 @@ public class Seat extends BaseModel {
     private int col;
 
     @Enumerated(EnumType.ORDINAL)
-    private SeatStatus seatStatus;
+    private SeatStatus seatStatus; // why we are using here
 }
