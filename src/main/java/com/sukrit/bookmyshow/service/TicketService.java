@@ -90,7 +90,7 @@ public class TicketService {
             Ticket ticket = generateTicket(bookTicketRequestDTO, showSeats);
 
             for (ShowSeat showSeat : showSeats) {
-                if (showSeat.getState().equals(ShowSeatState.AVAILABLE)) {
+                if (showSeat.getState().equals(ShowSeatState.LOCKED)) {
                     showSeat.setState(ShowSeatState.BOOKED);
                     showSeatRepository.save(showSeat);
                 }
@@ -121,16 +121,17 @@ public class TicketService {
             }
         }
 
+        ticket.setShow(showSeats.get(0).getShow());
         ticket.setBookedBy(userOptional.get());
         ticket.setTicketStatus(TicketStatus.PENDING); //Ticket Status will be CONFIRMED only after payment.
         ticket.setShowSeats(showSeats);
-        ticketRepository.save(ticket);
+        //ticketRepository.save(ticket);
         Double amount = calculateAmt(showSeats,seatTypeAndPrice);
         Boolean isPaid =  doPayment(amount);
         if(isPaid)
         {
             ticket.setTicketStatus((TicketStatus.SUCCESS));
-            ticketRepository.save(ticket);
+            ticket = ticketRepository.save(ticket);
         }
         return ticket;
     }
