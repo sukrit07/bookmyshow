@@ -19,7 +19,7 @@ public class Auditorium extends BaseModel{
     @OneToMany(mappedBy = "auditorium" ,cascade = CascadeType.ALL)
     private List<Show> shows;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Theatre theatre;
 
     @ElementCollection

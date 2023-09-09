@@ -57,6 +57,7 @@ public abstract class BaseModel {
   @PrePersist
   protected void onCreate() {
     createdAt = new Date();
+    modifiedAt = new Date();
   }
 
   @PreUpdate

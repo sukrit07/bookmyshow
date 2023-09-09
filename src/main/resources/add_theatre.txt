@@ -1,0 +1,71 @@
+curl --location 'localhost:8080/theatre/add' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "PVR Mall of Behala",
+    "address": "Behala",
+    "city": {
+        "id": 1,
+        "name": "Kolkata",
+        "state": "West Bengal"
+    },
+    "auditorium": [
+        {
+            "name": "AUDI 1",
+            "seats": [
+                {
+                    "name": "A1",
+                    "row": 1,
+                    "column": 1,
+                    "seatStatus": "AVAILABLE",
+                    "seatType": "GOLD"
+                },
+                {
+                    "name": "A2",
+                    "row": 1,
+                    "column": 2,
+                    "seatStatus": "AVAILABLE",
+                    "seatType": "GOLD"
+                },
+                {
+                    "name": "A3",
+                    "row": 1,
+                    "column": 3,
+                    "seatStatus": "AVAILABLE",
+                    "seatType": "GOLD"
+                },
+                {
+                    "name": "A4",
+                    "row": 1,
+                    "column": 4,
+                    "seatStatus": "AVAILABLE",
+                    "seatType": "GOLD"
+                },
+                {
+                    "name": "A5",
+                    "row": 1,
+                    "column": 5,
+                    "seatStatus": "AVAILABLE",
+                    "seatType": "GOLD"
+                },
+                {
+                    "name": "A6",
+                    "row": 1,
+                    "column": 6,
+                    "seatStatus": "AVAILABLE",
+                    "seatType": "GOLD"
+                },
+                {
+                    "name": "B1",
+                    "row": 2,
+                    "column": 7,
+                    "seatStatus": "AVAILABLE",
+                    "seatType": "SILVER"
+                }
+            ],
+
+            "auditoriumFeatures": [
+                "IMAX"
+            ]
+        }
+    ]
+}'

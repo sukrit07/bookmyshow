@@ -1,0 +1,102 @@
+curl --location 'localhost:8080/show/add' \
+--header 'Content-Type: application/json' \
+--data '{
+    "movie": {
+        "name": "ZNMD",
+        "actors": [
+            {
+                "name": "Shahrukh Khan"
+            }
+        ],
+        "movieFeatures": [
+            "IMAX"
+        ],
+        "duration": 120,
+        "genre": [
+            "COMEDY"
+        ],
+        "language": [
+            "BENGALI"
+        ]
+    },
+    "startTime": "2023-01-02",
+    "endTime": "2023-01-02",
+    "showSeatTypePriceList": [
+        {
+            "seatType": "GOLD",
+            "price": 120.0
+        },
+        {
+            "seatType": "SILVER",
+            "price": 120.0
+        }
+    ],
+    "features": [
+        "IMAX"
+    ],
+    "auditorium": {
+        "id": 1,
+        "name": "AUDI 1",
+        "seats": [
+            {
+                "id": 1,
+                "name": "A1",
+                "row": 1,
+                "column": 1,
+                "seatStatus": "AVAILABLE",
+                "seatType": "GOLD"
+            },
+            {
+                "id": 2,
+                "name": "A2",
+                "row": 1,
+                "column": 2,
+                "seatStatus": "AVAILABLE",
+                "seatType": "GOLD"
+            },
+            {
+                "id": 3,
+                "name": "A3",
+                "row": 1,
+                "column": 3,
+                "seatStatus": "AVAILABLE",
+                "seatType": "GOLD"
+            },
+            {
+                "id": 4,
+                "name": "A4",
+                "row": 1,
+                "column": 4,
+                "seatStatus": "AVAILABLE",
+                "seatType": "GOLD"
+            },
+            {
+                "id": 5,
+                "name": "A5",
+                "row": 1,
+                "column": 5,
+                "seatStatus": "AVAILABLE",
+                "seatType": "GOLD"
+            },
+            {
+                "id": 6,
+                "name": "A6",
+                "row": 1,
+                "column": 6,
+                "seatStatus": "AVAILABLE",
+                "seatType": "GOLD"
+            },
+            {
+                "id": 7,
+                "name": "B1",
+                "row": 2,
+                "column": 7,
+                "seatStatus": "AVAILABLE",
+                "seatType": "SILVER"
+            }
+        ],
+        "auditoriumFeatures": [
+            "IMAX"
+        ]
+    }
+}'
