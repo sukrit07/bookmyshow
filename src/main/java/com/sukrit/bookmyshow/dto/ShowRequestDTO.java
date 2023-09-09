@@ -4,6 +4,7 @@ package com.sukrit.bookmyshow.dto;
 import com.sukrit.bookmyshow.model.Auditorium;
 import com.sukrit.bookmyshow.model.Feature;
 import com.sukrit.bookmyshow.model.Movie;
+import com.sukrit.bookmyshow.model.ShowSeatType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,4 +24,5 @@ public class ShowRequestDTO {
     private Date endTime;
     private Auditorium auditorium;
     private List<Feature> features;
+    private List<ShowSeatTypePriceDTO> showSeatTypePriceList;
 }

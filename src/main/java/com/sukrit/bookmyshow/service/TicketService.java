@@ -37,7 +37,7 @@ public class TicketService {
     public BookTicketResponseDTO getTicketDetails(Long ticketId){
         Ticket ticket = this.ticketRepository.findById(ticketId).get();
         BookTicketResponseDTO bookTicketResponseDTO = null;
-        if(null!=ticket){
+        if(ticket != null){
             bookTicketResponseDTO = TicketEntityDTOBuilder.toBookTicketResponseDTO(ticket);
         }
         return bookTicketResponseDTO;
@@ -52,7 +52,7 @@ public class TicketService {
 
         //1. Fetch show Seats from the list of showSeatIds. (No lock)
         List<ShowSeat> showSeats = new ArrayList<>();
-        showSeats = showSeatRepository.findAllByIdIn(seatIdList);
+        showSeats = showSeatRepository.findAllByIdNoLock(seatIdList);
         /*for(Long showSeatId: bookTicketRequestDTO.getShowSeatIds()){
             ShowSeat showSeat = showSeatRepository.findById(showSeatId).get();
             showSeats.add(showSeat);
