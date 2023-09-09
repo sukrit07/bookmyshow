@@ -20,6 +20,7 @@ public class ShowController {
 
     @PostMapping("/add")
     public ResponseEntity<ShowResponseDTO> addShow(@RequestBody ShowRequestDTO showRequestDTO){
+            System.out.println("Adding show");
             return ResponseEntity.ok(showService.addShow(showRequestDTO));
     }
 }
